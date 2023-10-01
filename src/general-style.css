@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600&family=Roboto:wght@400;500;700&family=Young+Serif&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --MAIN-PADDING: 50px;
+}
+
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Gabarito', serif;
+    background: url(bg_pattern.jpg) repeat;
+    margin-bottom: 100px;
+}
+
+/* HEADER */
+
+header {
+    padding: 30px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    list-style-type: none;
+    font-size: 1.1rem;
+}
+
+header nav li {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform ease-in 0.2s;
+}
+
+header nav li:hover {
+    transform: translateY(-8px);
+}
+
+.nav-selected-tab {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+/* MAIN --GENERAL */
+
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: var(--MAIN-PADDING);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 10px;
+}
+
+section:not(:last-of-type) {
+    margin-bottom: 70px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+section p,
+section address {
+    font-size: 1.1rem;
+    color: rgb(215, 215, 215);
+}
+
+section p:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        margin-bottom: calc(var(--MAIN-PADDING) + 10px);
+    }
+    main {
+        min-height: 80vh;
+        margin: 0;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
