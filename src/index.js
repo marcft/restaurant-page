@@ -11,7 +11,7 @@ const structure = createPageStructure();
 const tabs = structure.header.querySelectorAll('li.nav-tab');
 
 // Initialize main in Home
-const defaultMainContent = loadContactContent();
+const defaultMainContent = loadHomeContent();
 // Initialaze selected tab in Home
 tabs.forEach(tab => { if(tab.id === 'home-tab') tab.classList.add('nav-selected-tab'); })
 
